@@ -1,0 +1,199 @@
+/* Forecast Component Styles */
+
+.forecast-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.forecast-title {
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+}
+
+.forecast-day {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.forecast-day:hover {
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.day-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.day-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.day-temperatures {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.temp-max {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.temp-min {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.day-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.precipitation,
+.wind {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.precipitation svg,
+.wind svg {
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .forecast-container {
+    padding: 1.5rem;
+  }
+
+  .forecast-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .forecast-day {
+    padding: 0.75rem;
+  }
+
+  .day-name {
+    font-size: 0.9rem;
+  }
+
+  .day-header {
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .temp-max {
+    font-size: 1.1rem;
+  }
+
+  .temp-min {
+    font-size: 0.9rem;
+  }
+
+  .precipitation,
+  .wind {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast-container {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .forecast-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .forecast-day {
+    padding: 0.6rem;
+  }
+
+  .day-name {
+    font-size: 0.8rem;
+  }
+
+  .day-header {
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .day-temperatures {
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .temp-max {
+    font-size: 1rem;
+  }
+
+  .temp-min {
+    font-size: 0.8rem;
+  }
+
+  .day-details {
+    gap: 0.4rem;
+  }
+
+  .precipitation,
+  .wind {
+    font-size: 0.75rem;
+    gap: 0.3rem;
+  }
+
+  .precipitation svg,
+  .wind svg {
+    width: 12px;
+    height: 12px;
+  }
+}

@@ -1,0 +1,355 @@
+/* FavoritesPage Styles */
+
+.favorites-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding-bottom: 2rem;
+}
+
+.favorites-page.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorites-header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.back-link,
+.clear-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.back-link {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.clear-button {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  margin-left: auto;
+}
+
+.clear-button:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.3);
+  transform: translateY(-2px);
+}
+
+.clear-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.favorites-header h1 {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.favorites-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.empty-favorites {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty-favorites h2 {
+  color: #1f2937;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.empty-favorites p {
+  color: #6b7280;
+  margin: 0 0 2rem 0;
+  font-size: 1rem;
+}
+
+.go-home-button {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.go-home-button:hover {
+  background: #764ba2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.favorites-count {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.count-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.count-label {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.favorites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.favorite-city-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.favorite-city-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.city-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.city-rank {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.city-details {
+  flex: 1;
+}
+
+.city-name {
+  color: #1f2937;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.city-coordinates {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.city-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.view-button,
+.remove-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.view-button:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.remove-button:hover {
+  background-color: #fee2e2;
+  color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.1);
+}
+
+.favorites-footer {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  min-height: 300px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container p {
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .favorites-header {
+    padding: 1rem;
+  }
+
+  .favorites-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .favorite-city-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .city-info {
+    width: 100%;
+  }
+
+  .city-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .favorites-count {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorites-container {
+    padding: 0;
+  }
+
+  .empty-favorites {
+    border-radius: 0;
+    padding: 2rem 1.5rem;
+  }
+
+  .favorites-header {
+    gap: 0.5rem;
+  }
+
+  .favorites-header h1 {
+    font-size: 1.1rem;
+  }
+
+  .favorite-city-card {
+    padding: 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .city-rank {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+
+  .city-name {
+    font-size: 1rem;
+  }
+
+  .city-coordinates {
+    font-size: 0.75rem;
+  }
+
+  .view-button,
+  .remove-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .favorites-footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}

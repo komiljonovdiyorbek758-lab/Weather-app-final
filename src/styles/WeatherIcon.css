@@ -1,0 +1,128 @@
+/* WeatherIcon Component Styles */
+
+.weather-icon-sunny,
+.weather-icon-mostly-sunny,
+.weather-icon-partly-cloudy,
+.weather-icon-mostly-cloudy,
+.weather-icon-cloudy,
+.weather-icon-rainy,
+.weather-icon-thunderstorm,
+.weather-icon-snowy,
+.weather-icon-fog {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Sunny Icon Animation */
+.weather-icon-sunny {
+  animation: rotateSun 20s linear infinite;
+}
+
+@keyframes rotateSun {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mostly Sunny - Light animation */
+.weather-icon-mostly-sunny {
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+/* Partly Cloudy - Gentle float */
+.weather-icon-partly-cloudy {
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+/* Mostly Cloudy - Slower animation */
+.weather-icon-mostly-cloudy {
+  animation: floatIcon 4s ease-in-out infinite;
+}
+
+/* Cloudy - No animation */
+.weather-icon-cloudy {
+  opacity: 0.95;
+}
+
+/* Rainy - Subtle pulse */
+.weather-icon-rainy {
+  animation: pulseIcon 2s ease-in-out infinite;
+}
+
+/* Thunderstorm - Pulse animation */
+.weather-icon-thunderstorm {
+  animation: pulseIcon 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px rgba(239, 68, 68, 0.3));
+}
+
+/* Snowy - Gentle float */
+.weather-icon-snowy {
+  animation: floatIcon 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 2px rgba(226, 232, 240, 0.5));
+}
+
+/* Fog - Fade animation */
+.weather-icon-fog {
+  animation: fadeInOutIcon 3s ease-in-out infinite;
+  opacity: 0.85;
+}
+
+@keyframes floatIcon {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseIcon {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeInOutIcon {
+  0%, 100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+/* Responsive Design - Icon sizes */
+@media (max-width: 768px) {
+  .weather-icon-sunny,
+  .weather-icon-mostly-sunny,
+  .weather-icon-partly-cloudy,
+  .weather-icon-mostly-cloudy,
+  .weather-icon-cloudy,
+  .weather-icon-rainy,
+  .weather-icon-thunderstorm,
+  .weather-icon-snowy,
+  .weather-icon-fog {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-icon-sunny,
+  .weather-icon-mostly-sunny,
+  .weather-icon-partly-cloudy,
+  .weather-icon-mostly-cloudy,
+  .weather-icon-cloudy,
+  .weather-icon-rainy,
+  .weather-icon-thunderstorm,
+  .weather-icon-snowy,
+  .weather-icon-fog {
+    max-width: 100%;
+  }
+}

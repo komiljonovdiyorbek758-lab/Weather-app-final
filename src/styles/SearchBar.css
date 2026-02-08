@@ -1,0 +1,240 @@
+/* SearchBar Component Styles */
+
+.search-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1.25rem 1rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1f2937;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-button {
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+}
+
+.search-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.search-button:active {
+  transform: translateY(0);
+}
+
+/* Suggestions Dropdown */
+.suggestions-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+}
+
+.suggestion-item {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #f3f4f6;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  color: #1f2937;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background: #f9fafb;
+}
+
+.suggestion-item:active {
+  background: #f3f4f6;
+}
+
+.suggestion-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e7ff;
+  border-radius: 0.5rem;
+}
+
+.suggestion-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.suggestion-name {
+  font-weight: 600;
+  color: #1f2937;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.suggestion-meta {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Scrollbar Styling */
+.suggestions-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.suggestions-dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.suggestions-dropdown::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.suggestions-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-form {
+    gap: 0.5rem;
+  }
+
+  .search-input {
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .search-button {
+    padding: 0.875rem 1rem;
+  }
+
+  .suggestion-item {
+    padding: 0.875rem 1rem;
+  }
+
+  .suggestion-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 1.1rem;
+  }
+
+  .suggestion-name {
+    font-size: 0.95rem;
+  }
+
+  .suggestion-meta {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .search-input {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .search-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  .suggestions-dropdown {
+    max-height: 300px;
+  }
+
+  .suggestion-item {
+    padding: 0.75rem 1rem;
+  }
+
+  .suggestion-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 1rem;
+  }
+
+  .suggestion-name {
+    font-size: 0.9rem;
+  }
+
+  .suggestion-meta {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,262 @@
+/* NotFoundPage Styles */
+
+.not-found-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.not-found-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.not-found-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.not-found-icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.not-found-title {
+  color: #1f2937;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+}
+
+.not-found-message {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+}
+
+.not-found-message p {
+  margin: 0.75rem 0;
+}
+
+.not-found-suggestions {
+  background: #f3f4f6;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  margin: 2rem 0;
+}
+
+.not-found-suggestions h3 {
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.not-found-suggestions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.not-found-suggestions li {
+  color: #4b5563;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0 0 0;
+}
+
+.home-button,
+.back-button,
+.reload-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  width: 100%;
+}
+
+.home-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.home-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+}
+
+.back-button {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.back-button:hover {
+  background: #d1d5db;
+  transform: translateY(-2px);
+}
+
+.reload-button {
+  background: #f3f4f6;
+  color: #1f2937;
+  border: 2px solid #e5e7eb;
+}
+
+.reload-button:hover {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+  transform: translateY(-2px);
+}
+
+.not-found-footer {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.not-found-footer a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.not-found-footer a:hover {
+  color: #764ba2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .not-found-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .not-found-number {
+    font-size: 3rem;
+    gap: 0.75rem;
+  }
+
+  .not-found-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .not-found-title {
+    font-size: 1.5rem;
+  }
+
+  .not-found-message {
+    font-size: 0.95rem;
+  }
+
+  .not-found-suggestions {
+    padding: 1.25rem;
+  }
+
+  .not-found-suggestions li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-page {
+    padding: 1rem;
+  }
+
+  .not-found-container {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .not-found-number {
+    font-size: 2.5rem;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .not-found-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .not-found-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .not-found-message {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .not-found-suggestions {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .not-found-suggestions h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .not-found-suggestions li {
+    font-size: 0.85rem;
+    gap: 0.5rem;
+  }
+
+  .home-button,
+  .back-button,
+  .reload-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .not-found-footer {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    font-size: 0.75rem;
+  }
+}
